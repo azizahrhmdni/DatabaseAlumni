@@ -127,7 +127,7 @@ def welcome_page():
     st.markdown("---") # Horizontal line for separation
 
     col1, col2, col3 = st.columns(3)
-with col1:
+    with col1:
     st.markdown(
         """
         <div class="feature-card">
@@ -136,7 +136,7 @@ with col1:
         </div>
         """, unsafe_allow_html=True
     )
-with col2:
+    with col2:
     st.markdown(
         """
         <div class="feature-card">
@@ -145,7 +145,7 @@ with col2:
         </div>
         """, unsafe_allow_html=True
     )
-with col3:
+    with col3:
     st.markdown(
         """
         <div class="feature-card">
