@@ -272,23 +272,22 @@ def alumni_detail_page(alumni_data):
             st.rerun()
 
     st.subheader("Informasi Alumni")
-    st.write(f"<b>Nama:</b> {alumni['Nama']}")
-    st.write(f"<b>Nama:</b> {alumni['NPM']}")
+    st.write(f"Nama: {alumni['Nama']}")
+    st.write(f"NPM: {alumni['NPM']}")
 
     st.subheader("Riwayat Pendidikan")
-    st.write(f"<b>Nama:</b> {alumni['Program Studi']}")
-    st.write(f"<b>Nama:</b> {alumni['Peminatan']}")
-    st.write(f"<b>Nama:</b> {alumni['Angkatan']}")
-    st.write(f"<b>Nama:</b> {alumni['Tahun Lulus']}")
-    st.write(f"<b>Nama:</b> {alumni['Judul Skripsi']}")
+    st.write(f"Program Studi: {alumni['Program Studi']}")
+    st.write(f"Peminatan: {alumni['Peminatan']}")
+    st.write(f"Angkatan: {alumni['Angkatan']}")
+    st.write(f"Tahun Lulus: {alumni['Tahun Lulus']}")
+    st.write(f"Judul Skripsi: {alumni['Judul Skripsi']}")
 
-    st.subheader("Informasi Karier")
-    st.write(f"<b>Nama:</b> {alumni['Pekerjaan']}")
-    st.write(f"<b>Nama:</b> {alumni['Nama Perusahaan']}")
-    st.write(f"<b>Nama:</b> {alumni['Id Karyawan']}")
-    st.write(f"<b>Nama:</b> {alumni['Alamat Perusahaan']}")
-    st.write(f"<b>Nama:</b> {alumni['Rata-rata Gaji']}")
-
+    st.subheader("Informasi Karir")
+    st.write(f"Pekerjaan: {alumni['Pekerjaan']}")
+    st.write(f"Perusahaan: {alumni['Nama Perusahaan']}")
+    st.write(f"ID Karyawan: {alumni['Id Karyawan']}")
+    st.write(f"Alamat Perusahaan: {alumni['Alamat Perusahaan']}")
+    st.write(f"Rata-rata Gaji: {alumni['Rata-rata Gaji']}")
 
 def statistics_page(alumni_data):
     """Displays statistics page."""
