@@ -282,7 +282,7 @@ def alumni_detail_page(alumni_data):
     st.write(f"Tahun Lulus: {alumni['Tahun Lulus']}")
     st.write(f"Judul Skripsi: {alumni['Judul Skripsi']}")
 
-    st.subheader("Informasi Karir")
+    st.subheader("Informasi Karier")
     st.write(f"Pekerjaan: {alumni['Pekerjaan']}")
     st.write(f"Perusahaan: {alumni['Nama Perusahaan']}")
     st.write(f"ID Karyawan: {alumni['Id Karyawan']}")
