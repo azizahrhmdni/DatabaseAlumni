@@ -4,7 +4,7 @@ import os
 from collections import Counter
 
 # --- Configuration ---
-FILE_PATH = "alumni_data (1).xlsx"
+FILE_PATH = "alumni_data.xlsx"
 SHEET_NAME = 'Data ' # Ensure this matches your Excel sheet name
 
 # --- Helper Functions ---
@@ -132,7 +132,7 @@ def welcome_page():
         st.markdown(
             """
             <div class="feature-card">
-                <h3>📊 Data Alumni</h3>
+                <h3>Data Alumni</h3>
                 <p>Pencarian dan pengelolaan<br>data lengkap alumni</p>
             </div>
             """, unsafe_allow_html=True
@@ -141,7 +141,7 @@ def welcome_page():
         st.markdown(
             """
             <div class="feature-card">
-                <h3>🏢 Perusahaan</h3>
+                <h3> Perusahaan</h3>
                 <p>Analisis distribusi alumni<br>di berbagai perusahaan</p>
             </div>
             """, unsafe_allow_html=True
@@ -150,7 +150,7 @@ def welcome_page():
         st.markdown(
             """
             <div class="feature-card">
-                <h3>📈 Statistik</h3>
+                <h3>Statistik</h3>
                 <p>Laporan dan analisis<br>data karir alumni</p>
             </div>
             """, unsafe_allow_html=True
@@ -173,17 +173,17 @@ def search_page(alumni_data):
     # Navigation buttons in the sidebar
     with st.sidebar:
         st.header("Navigasi")
-        if st.button("🏠 Beranda", key="nav_home"):
+        if st.button(" Beranda", key="nav_home"):
             st.session_state.current_page = 'welcome'
             st.rerun()
-        if st.button("📊 Statistik", key="nav_stats"):
+        if st.button("Statistik", key="nav_stats"):
             st.session_state.current_page = 'statistics'
             st.rerun()
-        if st.button("➕ Tambah Data", key="nav_add"):
+        if st.button("Tambah Data", key="nav_add"):
             st.session_state.current_page = 'add'
             st.rerun()
 
-    st.subheader("🔍 Pencarian Alumni")
+    st.subheader("Pencarian Alumni")
 
     # Search filters using Streamlit widgets
     col1, col2, col3 = st.columns(3)
@@ -274,18 +274,18 @@ def alumni_detail_page(alumni_data):
             st.session_state.current_page = 'search'
             st.rerun()
 
-    st.subheader("👤 Informasi Alumni")
+    st.subheader("Informasi Alumni")
     st.write(f"*Nama:* {alumni['Nama']}")
     st.write(f"*NPM:* {alumni['NPM']}")
 
-    st.subheader("📚 Riwayat Pendidikan")
+    st.subheader("Riwayat Pendidikan")
     st.write(f"*Program Studi:* {alumni['Program Studi']}")
     st.write(f"*Peminatan:* {alumni['Peminatan']}")
     st.write(f"*Angkatan:* {alumni['Angkatan']}")
     st.write(f"*Tahun Lulus:* {alumni['Tahun Lulus']}")
     st.write(f"*Judul Skripsi:* {alumni['Judul Skripsi']}")
 
-    st.subheader("💼 Informasi Karir")
+    st.subheader("Informasi Karir")
     st.write(f"*Pekerjaan:* {alumni['Pekerjaan']}")
     st.write(f"*Perusahaan:* {alumni['Nama Perusahaan']}")
     st.write(f"*ID Karyawan:* {alumni['Id Karyawan']}")
