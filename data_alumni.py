@@ -173,16 +173,13 @@ def search_page(alumni_data):
     # Navigation buttons in the sidebar
     with st.sidebar:
         st.header("Navigasi")
-        if st.button(" Beranda", key="nav_home"):
+        if st.button("Beranda", key="nav_home"):
             st.session_state.current_page = 'welcome'
             st.rerun()
         if st.button("Statistik", key="nav_stats"):
             st.session_state.current_page = 'statistics'
             st.rerun()
-        if st.button("Tambah Data", key="nav_add"):
-            st.session_state.current_page = 'add'
-            st.rerun()
-
+        
     st.subheader("Pencarian Alumni")
 
     # Search filters using Streamlit widgets
@@ -318,7 +315,7 @@ def statistics_page(alumni_data):
 
     st.markdown("---")
 
-    st.subheader("🏆 Top 3 Perusahaan Paling Populer")
+    st.subheader("Top 3 Perusahaan Paling Populer")
     if not alumni_data.empty:
         company_counts = Counter(alumni_data['Nama Perusahaan'].dropna())
         top_companies = company_counts.most_common(3)
@@ -390,30 +387,6 @@ def add_alumni_page():
                         st.error("Format gaji tidak valid! Masukkan angka saja.")
                         return
                     formatted_gaji = rata_rata_gaji # If already in Rp format, keep it
-
-            new_alumni = {
-                'No': len(st.session_state.alumni_data) + 1,
-                'Nama': nama,
-                'NPM': npm,
-                'Program Studi': program_studi,
-                'Angkatan': angkatan,
-                'Peminatan': peminatan,
-                'Judul Skripsi': judul_skripsi,
-                'Tahun Lulus': tahun_lulus,
-                'Pekerjaan': pekerjaan,
-                'Id Karyawan': id_karyawan,
-                'Nama Perusahaan': nama_perusahaan,
-                'Alamat Perusahaan': alamat_perusahaan,
-                'Rata-rata Gaji': formatted_gaji
-            }
-
-            # Add to dataframe (using session state to persist data)
-            new_row_df = pd.DataFrame([new_alumni])
-            st.session_state.alumni_data = pd.concat([st.session_state.alumni_data, new_row_df], ignore_index=True)
-
-            st.success("Data alumni berhasil ditambahkan!")
-            st.session_state.current_page = 'search'
-            st.rerun() # Rerun to show updated search page
 
 # --- Main Application Logic ---
 def main():
