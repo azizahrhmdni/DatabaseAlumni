@@ -228,6 +228,10 @@ def search_page(alumni_data):
     st.subheader(f"Hasil Pencarian ({len(filtered_data)} alumni)")
 
     if not filtered_data.empty:
+         # Create a dropdown for selecting an alumni
+        alumni_names = filtered_data['Nama'].tolist()
+        selected_name = st.selectbox("Pilih alumni untuk melihat detail:", [""] + alumni_names)
+        
         # Display DataFrame
         st.dataframe(filtered_data[['Nama', 'NPM', 'Program Studi', 'Pekerjaan', 'Nama Perusahaan', 'Rata-rata Gaji']],
                      use_container_width=True,
@@ -236,10 +240,6 @@ def search_page(alumni_data):
         # Allow user to select a row for details
         selected_row_index = st.session_state.get('selected_row_index', None)
         selected_row_nama = st.session_state.get('selected_row_nama', None)
-
-        # Create a dropdown for selecting an alumni
-        alumni_names = filtered_data['Nama'].tolist()
-        selected_name = st.selectbox("Pilih alumni untuk melihat detail:", [""] + alumni_names)
 
         if selected_name and selected_name != "":
             selected_alumni = filtered_data[filtered_data['Nama'] == selected_name].iloc[0]
