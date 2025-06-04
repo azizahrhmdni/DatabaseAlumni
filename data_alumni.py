@@ -172,7 +172,7 @@ def search_page(alumni_data):
 
     # Navigation buttons in the sidebar
     with st.sidebar:
-        st.header("Navigasi")
+        st.header("Home")
         if st.button("Beranda", key="nav_home"):
             st.session_state.current_page = 'welcome'
             st.rerun()
@@ -266,7 +266,7 @@ def alumni_detail_page(alumni_data):
 
     # Navigation in the sidebar
     with st.sidebar:
-        st.header("Navigasi")
+        st.header("Home")
         if st.button("← Kembali ke Pencarian", key="back_to_search"):
             st.session_state.current_page = 'search'
             st.rerun()
@@ -296,7 +296,7 @@ def statistics_page(alumni_data):
 
     # Navigation in the sidebar
     with st.sidebar:
-        st.header("Navigasi")
+        st.header("Home")
         if st.button("← Kembali ke Pencarian", key="back_to_search_stats"):
             st.session_state.current_page = 'search'
             st.rerun()
@@ -343,7 +343,7 @@ def add_alumni_page():
 
     # Navigation in the sidebar
     with st.sidebar:
-        st.header("Navigasi")
+        st.header("Home")
         if st.button("← Kembali ke Pencarian", key="back_from_add"):
             st.session_state.current_page = 'search'
             st.rerun()
