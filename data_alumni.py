@@ -438,5 +438,5 @@ def main():
     elif st.session_state.current_page == 'add':
         add_alumni_page()
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
