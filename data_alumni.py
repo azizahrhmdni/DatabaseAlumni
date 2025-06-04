@@ -127,34 +127,34 @@ def welcome_page():
     st.markdown("---") # Horizontal line for separation
 
     col1, col2, col3 = st.columns(3)
-    
+
     with col1:
-    st.markdown(
-        """
-        <div class="feature-card">
-            <h3 style="text-align: center;">Data Alumni</h3>
-            <p style="text-align: center;">Pencarian dan pengelolaan<br>data lengkap alumni</p>
-        </div>
-        """, unsafe_allow_html=True
-    )
+        st.markdown(
+            """
+            <div class="feature-card">
+                <h3>📊 Data Alumni</h3>
+                <p>Pencarian dan pengelolaan<br>data lengkap alumni</p>
+            </div>
+            """, unsafe_allow_html=True
+        )
     with col2:
-    st.markdown(
-        """
-        <div class="feature-card">
-            <h3 style="text-align: center;">Perusahaan</h3>
-            <p style="text-align: center;">Analisis distribusi alumni<br>di berbagai perusahaan</p>
-        </div>
-        """, unsafe_allow_html=True
-    )
+        st.markdown(
+            """
+            <div class="feature-card">
+                <h3>🏢 Perusahaan</h3>
+                <p>Analisis distribusi alumni<br>di berbagai perusahaan</p>
+            </div>
+            """, unsafe_allow_html=True
+        )
     with col3:
-    st.markdown(
-        """
-        <div class="feature-card">
-            <h3 style="text-align: center;">Statistik</h3>
-            <p style="text-align: center;">Laporan dan analisis<br>data karir alumni</p>
-        </div>
-        """, unsafe_allow_html=True
-    )
+        st.markdown(
+            """
+            <div class="feature-card">
+                <h3>📈 Statistik</h3>
+                <p>Laporan dan analisis<br>data karir alumni</p>
+            </div>
+            """, unsafe_allow_html=True
+        )
 
     st.markdown("---") # Horizontal line for separation
     st.write("") # Add some space
