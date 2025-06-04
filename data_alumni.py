@@ -124,14 +124,38 @@ def welcome_page():
     unsafe_allow_html=True
     )
 
-    st.markdown("---") # Horizontal line for separation
+    st.markdown("""
+    <style>
+    .feature-card {
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 20px;
+        background-color: #f0f2f6;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;  /* Biar semua card tinggi sama */
+    }
+
+    .feature-card h3 {
+        margin: 0 0 10px 0;
+    }
+
+    .feature-card p {
+        margin: 0;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns(3)
 
     with col1:
         st.markdown(
             """
-            <div class="feature-card" style="text-align: center;">
+            <div class="feature-card">
                 <h3>Data Alumni</h3>
                 <p>Pencarian dan pengelolaan<br>data lengkap alumni</p>
             </div>
@@ -140,7 +164,7 @@ def welcome_page():
     with col2:
         st.markdown(
             """
-            <div class="feature-card" style="text-align: center;">
+            <div class="feature-card">
                 <h3> Perusahaan</h3>
                 <p>Analisis distribusi alumni<br>di berbagai perusahaan</p>
             </div>
@@ -149,7 +173,7 @@ def welcome_page():
     with col3:
         st.markdown(
             """
-            <div class="feature-card"style="text-align: center;">
+            <div class="feature-card">
                 <h3>Statistik</h3>
                 <p>Laporan dan analisis<br>data karir alumni</p>
             </div>
