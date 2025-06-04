@@ -117,7 +117,7 @@ def welcome_page():
     st.markdown("<h1 style='text-align: center; color: white; font-size: 50px;'>DATABASE ALUMNI S1<br>DEPARTEMEN MATEMATIKA FMIPA UI</h1>", unsafe_allow_html=True)
     st.markdown(
     """
-    <p style='text-align: center; color: white; font-size: 25px; line-height: 1.25;'>
+    <p style='text-align: center; color: white; font-size: 25px; line-height: 1.0;'>
     Sistem informasi terintegrasi untuk mengelola data alumni S1<br>Matematika, Statistika, dan Ilmu Aktuaria FMIPA UI
     </p>
     """,
@@ -151,7 +151,7 @@ def welcome_page():
             """
             <div class="feature-card">
                 <h3>📈 Statistik</h3>
-                <p>Laporan dan analisis<br>data karir alumni</p>
+                <p>Laporan dan analisis<br>data karier alumni</p>
             </div>
             """, unsafe_allow_html=True
         )
@@ -282,7 +282,7 @@ def alumni_detail_page(alumni_data):
     st.write(f"*Tahun Lulus:* {alumni['Tahun Lulus']}")
     st.write(f"*Judul Skripsi:* {alumni['Judul Skripsi']}")
 
-    st.subheader("Informasi Karir")
+    st.subheader("Informasi Karier")
     st.write(f"*Pekerjaan:* {alumni['Pekerjaan']}")
     st.write(f"*Perusahaan:* {alumni['Nama Perusahaan']}")
     st.write(f"*ID Karyawan:* {alumni['Id Karyawan']}")
@@ -359,7 +359,7 @@ def add_alumni_page():
         judul_skripsi = st.text_area("Judul Skripsi:", key="form_judul_skripsi")
         tahun_lulus = st.text_input("Tahun Lulus:", key="form_tahun_lulus")
 
-        st.subheader("Informasi Karir")
+        st.subheader("Informasi Karier")
         pekerjaan = st.text_input("Pekerjaan:", key="form_pekerjaan")
         id_karyawan = st.text_input("Id Karyawan:", key="form_id_karyawan")
         nama_perusahaan = st.text_input("Nama Perusahaan:", key="form_nama_perusahaan")
